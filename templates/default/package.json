@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@xania/view": "0.4.3",
+    "@xania/view": "0.4.4",
     "prettier": "latest",
     "rxjs": "^7.5.7",
     "vite": "latest"
