@@ -6,8 +6,13 @@ import * as Ro from "rxjs/operators";
 const jsx = jsxFactory({ classes });
 
 export default function Clock() {
-  var now = Rx.timer(0, 100).pipe(Ro.map(() => new Date()));
-  function transform(fn: (d: Date) => number) {
+  var now = Rx.timer(0, 100).pipe(
+    Ro.map(() => {
+      const d = new Date();
+      return d.getTime() - d.getTimezoneOffset() * 60000;
+    })
+  );
+  function transform(fn: (d: number) => number) {
     return now.pipe(Ro.map((d) => `transform: rotate(${fn(d)}deg);`));
   }
 
@@ -32,15 +37,14 @@ export default function Clock() {
   );
 }
 
-function seconds(d: Date) {
-  const sec = d.getSeconds() + d.getMilliseconds() / 1000.0;
-  return (360 * sec) / 60.0 - 90;
+function seconds(d: number) {
+  return (360 * (d % 60000)) / 60000 - 90;
 }
 
-function minutes(d: Date) {
-  return (360 * d.getMinutes()) / 60.0 - 90;
+function minutes(d: number) {
+  return (360 * (d % 3600000)) / 3600000 - 90;
 }
 
-function hours(d: Date) {
-  return (360 * d.getHours()) / 60.0 - 90;
+function hours(d: number) {
+  return (360 * (d % 43200000)) / 43200000 - 90;
 }

@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
-  "description": "description",
+  "name": "{{ kebab name }}",
+  "description": "{{ description }}",
   "version": "0.0.0",
-  "author": "Ibrahim ben Salah",
+  "author": "{{ author }}",
   "scripts": {
     "start": "npx vite",
     "build": "npx vite build --emptyOutDir"
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@xania/view": "0.4.4",
+    "@xania/view": "^0.4.5",
     "prettier": "latest",
     "rxjs": "^7.5.7",
     "vite": "latest"
