@@ -13,6 +13,7 @@ Welcome to xania App
 
 create("create-xania", {
   templateRoot,
+  promptForTemplate: true,
   async after({ answers, run, template }) {
     if (template === "gitmodule")
       await run(
