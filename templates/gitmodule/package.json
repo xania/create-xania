@@ -16,7 +16,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "prettier": "latest",
     "rxjs": "^7.5.7",
     "vite": "latest"
   }
