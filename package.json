@@ -1,7 +1,7 @@
 {
   "name": "@xania/create-app",
   "description": "Reactive UI Library",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "private": false,
   "author": "Ibrahim ben Salah",
   "scripts": {
