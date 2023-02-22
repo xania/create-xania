@@ -16,9 +16,7 @@ create("create-xania", {
   promptForTemplate: true,
   async after({ answers, run, template }) {
     if (template === "gitmodule")
-      await run(
-        "git submodule add https://github.com/xania/view.git packages/view"
-      );
+      await run("git submodule add https://github.com/xania/view.git xania");
   },
   caveat,
 });

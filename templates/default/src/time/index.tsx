@@ -1,5 +1,5 @@
 ﻿import { jsxFactory } from "@xania/view";
-import classes from "./time.module.scss";
+import classes from "./time.module.css";
 import { timer } from "rxjs";
 import { map } from "rxjs/operators";
 

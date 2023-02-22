@@ -1,7 +1,7 @@
 {
   "name": "@xania/create-app",
   "description": "Reactive UI Library",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": false,
   "author": "Ibrahim ben Salah",
   "scripts": {
@@ -9,7 +9,7 @@
     "clean": "npx rimraf dist",
     "dev": "tsup src/cli.ts --watch",
     "prepublishOnly": "npm run clean && npm run build && npx rimraf %LocalAppData%\\npm-cache\\_npx",
-    "test": "node dist/cli.js test-app --template gitmodule"
+    "test": "npx rimraf test-app && node dist/cli.js test-app"
   },
   "bin": "dist/cli.js",
   "files": [

@@ -42,14 +42,15 @@ section:after {
 .credits {
   color: gray;
   font-size: 12px;
-  a {
-    color: rgba(146, 239, 255, 0.267);
-    text-decoration: none;
+}
 
-    &:hover {
-      color: rgb(146, 239, 255);
-    }
-  }
+.credits a {
+  color: rgba(146, 239, 255, 0.267);
+  text-decoration: none;
+}
+
+.credits a:hover {
+  color: rgb(146, 239, 255);
 }
 
 .label {

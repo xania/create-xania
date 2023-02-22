@@ -7,9 +7,9 @@
     "jsxFragmentFactory": "jsx.createFragment",
     "moduleResolution": "node",
     "module": "ES2020",
-    "typeRoots": ["./types", "./packages/xania/view/types"],
+    "typeRoots": ["./types", "./xania/packages/xania/view/types"],
     "paths": {
-      "@xania/view": ["./packages/view/lib/index.ts"]
+      "@xania/view": ["./xania/packages/view/lib/index.ts"]
     }
   }
 }
