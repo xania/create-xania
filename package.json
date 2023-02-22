@@ -8,8 +8,8 @@
     "build": "tsup src/cli.ts --minify",
     "clean": "npx rimraf dist",
     "dev": "tsup src/cli.ts --watch",
-    "prepublishOnly": "npm run clean && npm run build && npx rimraf %LocalAppData%\\npm-cache\\_npx",
-    "test": "npx rimraf test-app && node dist/cli.js test-app"
+    "prepublishOnly": "npm run clean && npm version patch && npm run build && npx rimraf %LocalAppData%\\npm-cache\\_npx",
+    "test": "npx rimraf test-app && node dist/cli.js test-app && cd test-app && npm start"
   },
   "bin": "dist/cli.js",
   "files": [
